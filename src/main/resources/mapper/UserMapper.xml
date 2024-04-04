@@ -8,13 +8,16 @@
             <id property="id" column="id" jdbcType="BIGINT"/>
             <result property="username" column="username" jdbcType="VARCHAR"/>
             <result property="useraccount" column="userAccount" jdbcType="VARCHAR"/>
-            <result property="avatarurl" column="avatarUrl" jdbcType="VARCHAR"/>
-            <result property="gender" column="gender" jdbcType="TINYINT"/>
             <result property="userpassword" column="userPassword" jdbcType="VARCHAR"/>
+            <result property="userdescription" column="userDescription" jdbcType="VARCHAR"/>
+            <result property="useridurl" column="userIdUrl" jdbcType="VARCHAR"/>
+            <result property="gender" column="gender" jdbcType="TINYINT"/>
             <result property="phone" column="phone" jdbcType="VARCHAR"/>
-            <result property="email" column="email" jdbcType="VARCHAR"/>
-            <result property="userstatus" column="userStatus" jdbcType="INTEGER"/>
+            <result property="emailaddress" column="emailAddress" jdbcType="VARCHAR"/>
+            <result property="address" column="address" jdbcType="VARCHAR"/>
+            <result property="userrole" column="userRole" jdbcType="INTEGER"/>
             <result property="havepets" column="havePets" jdbcType="INTEGER"/>
+            <result property="usercredits" column="userCredits" jdbcType="INTEGER"/>
             <result property="createtime" column="createTime" jdbcType="TIMESTAMP"/>
             <result property="updatetime" column="updateTime" jdbcType="TIMESTAMP"/>
             <result property="isdelete" column="isDelete" jdbcType="TINYINT"/>
@@ -22,9 +25,10 @@
 
     <sql id="Base_Column_List">
         id,username,userAccount,
-        avatarUrl,gender,userPassword,
-        phone,email,userStatus,
-        havePets,createTime,updateTime,
+        userPassword,userDescription,userIdUrl,
+        gender,phone,emailAddress,
+        address,userRole,havePets,
+        userCredits,createTime,updateTime,
         isDelete
     </sql>
 </mapper>

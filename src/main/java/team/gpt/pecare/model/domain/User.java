@@ -30,19 +30,24 @@ public class User implements Serializable {
     private String useraccount;
 
     /**
-     * user avatar
+     * user password
      */
-    private String avatarurl;
+    private String userpassword;
+
+    /**
+     * user description
+     */
+    private String userdescription;
+
+    /**
+     * user ID/Passport photo
+     */
+    private String useridurl;
 
     /**
      * user gender
      */
     private Integer gender;
-
-    /**
-     * user password
-     */
-    private String userpassword;
 
     /**
      * user phone number
@@ -52,17 +57,27 @@ public class User implements Serializable {
     /**
      * user email
      */
-    private String email;
+    private String emailaddress;
 
     /**
-     * 0 - normal
+     * user address
      */
-    private Integer userstatus;
+    private String address;
+
+    /**
+     * 0 - regular, 1 - volunteer
+     */
+    private Integer userrole;
 
     /**
      * whether user has pets
      */
     private Integer havepets;
+
+    /**
+     * user credit after complete task
+     */
+    private Integer usercredits;
 
     /**
      * first create time

@@ -26,8 +26,6 @@ public class UserController {
 
     static final Logger logger = LogManager.getLogger(UserController.class);
 
-    @Resource
-    private UserService userService;
 
 
 //    @GetMapping("/{userId}")

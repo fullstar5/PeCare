@@ -22,4 +22,4 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-southeast-4
       - name: Update Lambda Function
-        run: aws lambda update-function-code --function-name pecare-PecareFunction-AsWxh890nknd --zip-file fileb://target/pecare-lambda.jar
+        run: aws lambda update-function-code --function-name pecare-PecareFunction-AsWxh890nknd --zip-file fileb://target/pecare-0.0.1-SNAPSHOT-lambda.jar

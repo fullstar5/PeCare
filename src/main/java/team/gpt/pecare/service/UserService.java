@@ -1,0 +1,13 @@
+package team.gpt.pecare.service;
+
+import team.gpt.pecare.model.domain.User;
+import com.baomidou.mybatisplus.extension.service.IService;
+
+/**
+* @author Administrator
+* @description 针对表【user(user_table)】的数据库操作Service
+* @createDate 2024-04-04 21:16:20
+*/
+public interface UserService extends IService<User> {
+
+}

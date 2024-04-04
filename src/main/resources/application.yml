@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: pecare
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://pecare-dev-mysql.c1co08k8ab6w.ap-southeast-4.rds.amazonaws.com:3306/pecare_dev
+    username: admin
+    password: pecare-wdfwfw230**Gj
+  session:
+    timeout: 86400
+server:
+  address:0.0.0.0
+#mybatis-plus:
+#  configuration:
+#    map-underscore-to-camel-case: false
+#  global-config:
+#    db-config:
+#      logic-delete-field: isDelete
+#      logic-delete-value: 1
+#      logic-not-delete-value: 0

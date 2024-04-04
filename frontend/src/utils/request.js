@@ -21,14 +21,14 @@ instance.interceptors.request.use(config => {
 
   // TODO repeatSubmit judge: maybe this judge can be placed to where the request is invoked.
 
-  /*  if (config.method === 'post' || config.method === 'put') {
+/*  if (config.method === 'post' || config.method === 'put') {
     const requestObj = {
       url: config.url,
       data: typeof config.data === 'object' ? JSON.stringify(config.data) : config.data,
       time: new Date().getTime()
     }
     // TODO repeatSubmit judge: maybe this judge can be placed to where the request is invoked.
-  } */
+  }*/
   return config
 }, error => {
   console.log(error)
@@ -37,7 +37,7 @@ instance.interceptors.request.use(config => {
 // REST Response
 instance.interceptors.response.use(res => {
   const code = res.data.code || 200
-  const msg = errorCode[code] || res.data.msg || errorCode.default
+  // const msg = errorCode[code] || res.data.msg || errorCode.default
   if (res.request.responseType === 'blob' || res.request.responseType === 'arraybuffer') {
     return res.data
   }

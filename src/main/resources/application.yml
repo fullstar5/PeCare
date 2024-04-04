@@ -3,9 +3,9 @@ spring:
     name: pecare
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://pecare-dev-mysql.c1co08k8ab6w.ap-southeast-4.rds.amazonaws.com:3306/pecare_dev
+    url: jdbc:mysql://pecare-dev.c1co08k8ab6w.ap-southeast-4.rds.amazonaws.com:3306/pecare_dev
     username: admin
-    password: pecare-wdfwfw230**Gj
+    password: admin123
   session:
     timeout: 86400
 server:

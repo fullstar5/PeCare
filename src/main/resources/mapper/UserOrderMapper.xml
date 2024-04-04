@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="team.gpt.pecare.mapper.UserOrderMapper">
+
+    <resultMap id="BaseResultMap" type="team.gpt.pecare.model.domain.UserOrder">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="ordername" column="orderName" jdbcType="VARCHAR"/>
+            <result property="orderdescription" column="orderDescription" jdbcType="VARCHAR"/>
+            <result property="requesterid" column="requesterID" jdbcType="BIGINT"/>
+            <result property="requesterpetid" column="requesterPetID" jdbcType="BIGINT"/>
+            <result property="volunteerid" column="volunteerID" jdbcType="BIGINT"/>
+            <result property="creditsreward" column="creditsReward" jdbcType="INTEGER"/>
+            <result property="ordertime" column="orderTime" jdbcType="TIMESTAMP"/>
+            <result property="accept" column="accept" jdbcType="TINYINT"/>
+            <result property="createtime" column="createTime" jdbcType="TIMESTAMP"/>
+            <result property="updatetime" column="updateTime" jdbcType="TIMESTAMP"/>
+            <result property="isdelete" column="isDelete" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,orderName,orderDescription,
+        requesterID,requesterPetID,volunteerID,
+        creditsReward,orderTime,accept,
+        createTime,updateTime,isDelete
+    </sql>
+</mapper>

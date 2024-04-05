@@ -57,4 +57,6 @@ instance.interceptors.response.use(res => {
     return res.data
   }
 
+}, error => {
+  console.log('err' + error)
 })

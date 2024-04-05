@@ -32,6 +32,7 @@ instance.interceptors.request.use(config => {
   return config;
 }, error => {
   console.log(error)
+  return Promise.reject(error)
 })
 
 // REST Response
@@ -43,10 +44,10 @@ instance.interceptors.response.use(res => {
   }
 
   if (code === 500) {
-    Message({ message: msg, type: 'error' })
+    // Message({ message: msg, type: 'error' })
     return Promise.reject(new Error(msg))
   } else if (code === 601) {
-    Message({ message: msg, type: 'warning' })
+    // Message({ message: msg, type: 'warning' })
     return Promise.reject('error')
   } else if (code !== 200) {
     Notification.error({ title: msg })
@@ -57,4 +58,7 @@ instance.interceptors.response.use(res => {
 
 }, error => {
   console.log('err' + error)
+  return Promise.reject(error)
 })
+
+export default instance

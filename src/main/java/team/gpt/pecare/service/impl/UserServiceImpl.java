@@ -45,11 +45,15 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         user.setUsername(userName);
         user.setUseraccount(userAccount);
         user.setUserpassword(userPassword);
+        boolean isSuccess = this.save(user);
+        if (!isSuccess){
+            return -1;
+        }
         return user.getId();
     }
 
     @Override
-    public User userLogin(String userAccount, String userPassword, HttpServletRequest request) throws Exception {
+    public User userLogin(String userAccount, String userPassword) throws Exception {
         // 1. basic check
         if (StringUtils.isAnyBlank(userAccount, userPassword)){
             throw new Exception("user account or password is blank when login");
@@ -63,8 +67,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         if (user == null){
             throw new Exception("user account or password couldn't match when login");
         }
-        // 4.record user session and return user
-        request.getSession().setAttribute(USER_LOGIN_STATE, user);
+        // 4.todo:record user session
         return user;
     }
 

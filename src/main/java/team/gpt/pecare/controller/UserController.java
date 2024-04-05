@@ -48,7 +48,7 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public BaseResponse<User> userLogin(@RequestBody UserLoginRequest userLoginRequest, HttpServletRequest request) throws Exception {
+    public BaseResponse<User> userLogin(@RequestBody UserLoginRequest userLoginRequest) throws Exception {
         if (userLoginRequest == null){
             throw new Exception("user login request is empty when request");
         }
@@ -57,7 +57,7 @@ public class UserController {
         if (StringUtils.isAnyBlank(userAccount, userPassword)){
             throw new Exception("user account or password is blank when login request");
         }
-        User user = userService.userLogin(userAccount, userPassword, request);
+        User user = userService.userLogin(userAccount, userPassword);
         return ResultUtils.success(user);
     }
 

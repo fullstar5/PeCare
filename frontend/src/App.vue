@@ -33,7 +33,7 @@
     <div style="padding-left: 100px; padding-right: 255px">
         <RouterView />
     </div>
-    <strong>Current route path:</strong> {{ $route.fullPath }}
+    <strong hidden="hidden">Current route path:{{ $route.fullPath }}</strong>
 
   </main>
 </template>

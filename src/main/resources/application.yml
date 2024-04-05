@@ -3,7 +3,7 @@ spring:
     name: pecare
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://pecare-dev.c1co08k8ab6w.ap-southeast-4.rds.amazonaws.com:3306/pecare_dev
+    url: jdbc:mysql://pecare-dev.c1co08k8ab6w.ap-southeast-4.rds.amazonaws.com:3306/teamgpt
     username: admin
     password: admin123
   session:

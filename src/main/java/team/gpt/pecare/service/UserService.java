@@ -12,7 +12,7 @@ public interface UserService extends IService<User> {
     long userRegister(String userName, String userAccount, String userPassword);
 
 
-    User userLogin(String userAccount, String userPassword, HttpServletRequest request) throws Exception;
+    User userLogin(String userAccount, String userPassword) throws Exception;
 
 
     int userLogout(HttpServletRequest request);

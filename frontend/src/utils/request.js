@@ -1,12 +1,12 @@
 import axios from 'axios'
-import {processParams} from '@/utils/param'
+import { processParams } from '@/utils/param'
 import errorCode from '@/utils/errorCode'
 
 axios.defaults.headers['Content-Type'] = 'application/json;charset=utf-8'
 
 const instance = axios.create({
   // server url
-  baseURL: process.env["VUE_APP_BASE_API"],
+  baseURL: process.env.VUE_APP_BASE_API,
   timeout: 10000
 })
 
@@ -14,9 +14,9 @@ const instance = axios.create({
 instance.interceptors.request.use(config => {
   // create a url like '?product=shirt&color=blue&newuser&size=m'
   if (config.method === 'get' && config.params) {
-    let url = config.url + '?' + processParams(config.params);
-    config.params = {};
-    config.url = url;
+    const url = config.url + '?' + processParams(config.params)
+    config.params = {}
+    config.url = url
   }
 
   // TODO repeatSubmit judge: maybe this judge can be placed to where the request is invoked.
@@ -29,7 +29,7 @@ instance.interceptors.request.use(config => {
     }
     // TODO repeatSubmit judge: maybe this judge can be placed to where the request is invoked.
   }
-  return config;
+  return config
 }, error => {
   console.log(error)
   return Promise.reject(error)
@@ -37,9 +37,9 @@ instance.interceptors.request.use(config => {
 
 // REST Response
 instance.interceptors.response.use(res => {
-  const code = res.data.code || 200;
-  const msg = errorCode[code] || res.data.msg || errorCode['default']
-  if (res.request.responseType ===  'blob' || res.request.responseType ===  'arraybuffer') {
+  const code = res.data.code || 200
+  const msg = errorCode[code] || res.data.msg || errorCode.default
+  if (res.request.responseType === 'blob' || res.request.responseType === 'arraybuffer') {
     return res.data
   }
 
@@ -55,7 +55,6 @@ instance.interceptors.response.use(res => {
   } else {
     return res.data
   }
-
 }, error => {
   console.log('err' + error)
   return Promise.reject(error)

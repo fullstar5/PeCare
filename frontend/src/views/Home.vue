@@ -21,7 +21,7 @@
             <v-col v-for="n in 2" :key="n">
               <v-sheet class="pa-2 ma-2 pecare-order" style="height: 150px">
                 {{ (m-1) * 2 + n }}
-                <b>Owner: </b>{{ orders[(m-1) * 2 + n]. }}<br/>
+                <b>Owner: </b>{{ orders[(m-1) * 2 + n]}}<br/>
                 <b>Pet Name: </b><br/>
                 <b>Time Requirement: </b><br/>
                 <b>Location: </b><br/>

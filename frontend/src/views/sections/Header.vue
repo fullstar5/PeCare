@@ -1,35 +1,39 @@
 <template>
-  <div class="header">
-    <img class="i-need-pecare" alt="I need pecare" src="i-need-pecare-service.png" />
+  <header class="header">
+    <img class="who-i-can-help" alt="Who i can help" src="/img/who-i-can-help.png" />
     <div class="frame">
-      <div class="text-wrapper">Volunteer Center</div>
+      <div class="text-wrapper">Service Center</div>
       <div class="div">My Account</div>
     </div>
     <div class="cart-button">
       <div class="text-wrapper-2">Log in</div>
     </div>
-  </div>
+  </header>
 </template>
 
 <script>
 export default {
-  name: 'page-register'
-}
+  name: "Header",
+};
 </script>
 
+
 <style>
-.header {
+ .header {
+  background-color: transparent;
   height: 112px;
-  position: relative;
+  left: -168px;
+  position: absolute;
+  top: -3px;
   width: 1440px;
 }
 
-.header .i-need-pecare {
-  height: 38px;
-  left: 198px;
+.header .who-i-can-help {
+  height: 46px;
+  left: 204px;
   position: absolute;
-  top: 36px;
-  width: 400px;
+  top: 41px;
+  width: 278px;
 }
 
 .header .frame {
@@ -37,14 +41,14 @@ export default {
   display: inline-flex;
   gap: 30px;
   justify-content: center;
-  left: 933px;
+  left: 939px;
   position: absolute;
-  top: 52px;
+  top: 48px;
 }
 
 .header .text-wrapper {
   color: #000000;
-  font-family: "Inter-Regular", Helvetica;
+  font-family: "Inter", Helvetica;
   font-size: 16px;
   font-weight: 400;
   height: 22px;
@@ -59,7 +63,7 @@ export default {
 
 .header .div {
   color: #000000;
-  font-family: "Inter-Regular", Helvetica;
+  font-family: "Inter", Helvetica;
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 0;
@@ -84,7 +88,7 @@ export default {
 
 .header .text-wrapper-2 {
   color: #6d6d6d;
-  font-family: "Inter-Bold", Helvetica;
+  font-family: "Inter", Helvetica;
   font-size: 16px;
   font-weight: 700;
   height: 21px;
@@ -96,4 +100,5 @@ export default {
   top: 12px;
   white-space: nowrap;
 }
+
 </style>

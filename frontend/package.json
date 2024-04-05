@@ -12,6 +12,7 @@
     "core-js": "^3.8.3",
     "vue": "^3.2.13",
     "vue-axios": "^3.5.2",
+    "vue-router": "^4.3.0",
     "vuetify": "^3.5.14"
   },
   "devDependencies": {
@@ -41,7 +42,9 @@
       "parser": "@babel/eslint-parser"
     },
     "rules": {
-      "no-unused-vars": "off"
+      "no-unused-vars": "off",
+      "no-multiple-empty-lines": "off",
+      "quotes": "off"
     }
   },
   "browserslist": [

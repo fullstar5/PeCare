@@ -1,14 +1,21 @@
 <template>
-  <div class="header">
-    <img class="i-need-pecare" alt="I need pecare" src="i-need-pecare-service.png" />
-    <div class="frame">
-      <div class="text-wrapper">Volunteer Center</div>
-      <div class="div">My Account</div>
-    </div>
-    <div class="cart-button">
-      <div class="text-wrapper-2">Log in</div>
+  <div class="container">
+    <div class="header">
+<!--      <img class="i-need-pecare" alt="I need pecare" src="..\public\img\i-need-pecare-service.png" />-->
+      <div class="frame">
+        <button type="button" class="VolunteerCenter">
+          <span class="btn__txt">Volunteer Center</span>
+        </button>
+        <button type="button" class="myAccount">
+          <span class="btn__txt">My Account</span>
+        </button>
+        <button type="button" class="loginButton">
+          <span class="btn__txt">Log in</span>
+        </button>
+      </div>
     </div>
   </div>
+
 </template>
 
 <script>
@@ -18,82 +25,52 @@ export default {
 </script>
 
 <style>
-.header {
-  height: 112px;
-  position: relative;
-  width: 1440px;
-}
-
-.header .i-need-pecare {
-  height: 38px;
-  left: 198px;
+.container{
+  overflow: auto;
   position: absolute;
-  top: 36px;
-  width: 400px;
+  height: 100%;
+  width: 100%;
+  background-color: #FFFFCC !important; /* 淡黄色背景 */
 }
 
-.header .frame {
+.header {
+  height: 10%;
+  position: absolute;
+  width: 100%;
+}
+
+.frame {
   align-items: center;
   display: inline-flex;
   gap: 30px;
   justify-content: center;
-  left: 933px;
+  left: 70%;
   position: absolute;
-  top: 52px;
+  top: 70%;
 }
 
-.header .text-wrapper {
-  color: #000000;
-  font-family: "Inter-Regular", Helvetica;
-  font-size: 16px;
-  font-weight: 400;
-  height: 22px;
-  letter-spacing: 0;
-  line-height: 20.8px;
-  margin-top: -1px;
-  position: relative;
+.VolunteerCenter, .myAccount, .loginButton{
+  background-color: white; /* Green */
+  border: 2px solid #04AA6D;
+  color: black;
+  border-radius: 12px;
+  padding: 10px 10px;
   text-align: center;
-  white-space: nowrap;
-  width: 113px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  transition-duration: 0.4s;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-.header .div {
-  color: #000000;
-  font-family: "Inter-Regular", Helvetica;
-  font-size: 16px;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 20.8px;
-  margin-top: -0.5px;
-  position: relative;
-  text-align: center;
-  white-space: nowrap;
-  width: fit-content;
+.VolunteerCenter:hover, .myAccount:hover, .loginButton:hover {
+  background-color: #04AA6D; /* Green */
+  color: white;
+}
+.VolunteerCenter:active, .myAccount:active, .loginButton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
-.header .cart-button {
-  background-color: #ffd74c;
-  border-radius: 8px;
-  height: 48px;
-  left: 1218px;
-  overflow: hidden;
-  position: absolute;
-  top: 32px;
-  width: 126px;
-}
-
-.header .text-wrapper-2 {
-  color: #6d6d6d;
-  font-family: "Inter-Bold", Helvetica;
-  font-size: 16px;
-  font-weight: 700;
-  height: 21px;
-  left: 39px;
-  letter-spacing: 0;
-  line-height: 20.8px;
-  position: absolute;
-  text-align: center;
-  top: 12px;
-  white-space: nowrap;
-}
 </style>

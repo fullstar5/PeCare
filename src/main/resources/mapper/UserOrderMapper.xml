@@ -3,7 +3,9 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="team.gpt.pecare.mapper.UserOrderMapper">
-
+    <select id="getAllOrders" resultType="team.gpt.pecare.model.domain.UserOrder">
+        SELECT * FROM user_order;
+    </select>
     <resultMap id="BaseResultMap" type="team.gpt.pecare.model.domain.UserOrder">
             <id property="id" column="id" jdbcType="BIGINT"/>
             <result property="ordername" column="orderName" jdbcType="VARCHAR"/>

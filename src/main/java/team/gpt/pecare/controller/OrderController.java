@@ -11,6 +11,7 @@ import team.gpt.pecare.model.domain.request.OrderUpdateRequest;
 import team.gpt.pecare.service.UserOrderService;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @RestController
 @EnableWebMvc
@@ -70,6 +71,11 @@ public class OrderController {
             return -1;
         }
         return order.getId();
+    }
+
+    @PostMapping("/all")
+    public List<UserOrder> getAllOrders() {
+        return userOrderService.getAllOrders();
     }
 
 }

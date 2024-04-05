@@ -20,8 +20,8 @@
           <v-row align="start" style="height: 145px">
             <v-col v-for="n in 2" :key="n">
               <v-sheet class="pa-2 ma-2 pecare-order" style="height: 150px">
-                {{ (m-1) * 2 + n }}
-                <b>Owner: </b>{{ orders[(m-1) * 2 + n]}}<br/>
+
+                <b>Owner: </b>{{ (m-1) * 2 + n }}{{ orders[(m-1) * 2 + n]}}<br/>
                 <b>Pet Name: </b><br/>
                 <b>Time Requirement: </b><br/>
                 <b>Location: </b><br/>
@@ -39,8 +39,12 @@
 
 <script>
 
+
 export default {
   name: 'Home',
+  created() {
+    this.getAvailableOrder()
+  },
   data () {
     return {
       // queryParams is used to search item
@@ -56,7 +60,11 @@ export default {
   },
   methods: {
     getAvailableOrder() {
-
+      listUser(this.addDateRange(this.queryParams, this.dateRange)).then(response => {
+        this.userList = response.rows;
+        this.total = response.total;
+        this.loading = false;
+      });
     },
     moreOrder() {
       this.orders = [
@@ -86,14 +94,6 @@ export default {
         },
       ]
     },
-    lessOrder() {
-      this.orders = [
-        {
-          name: 'Item #1',
-          id: 1,
-        },
-      ]
-    }
   }
 }
 </script>

@@ -18,6 +18,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/eslint-parser": "^7.12.16",
+    "@mdi/font": "^7.4.47",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
@@ -44,7 +45,12 @@
     "rules": {
       "no-unused-vars": "off",
       "no-multiple-empty-lines": "off",
-      "quotes": "off"
+      "quotes": "off",
+      "vue/multi-word-component-names": "off",
+      "space-before-function-paren": "off",
+      "key-spacing": "off",
+      "vue/no-unused-components": "off",
+      "comma-dangle": "off"
     }
   },
   "browserslist": [

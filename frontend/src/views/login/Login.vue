@@ -1,10 +1,12 @@
-<script setup>
-
-</script>
-
 <template>
-  <v-card text="..." variant="tonal"></v-card>
+  <v-card text="this is login page" variant="tonal"></v-card>
 </template>
+
+<script>
+export default {
+  name: 'Login'
+}
+</script>
 
 <style>
 

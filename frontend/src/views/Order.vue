@@ -1,10 +1,10 @@
-<script setup>
+<template>
+  <v-card text="Order page" variant="tonal"></v-card>
+</template>
+
+<script>
 
 </script>
-
-<template>
-  <v-card text="..." variant="tonal"></v-card>
-</template>
 
 <style scoped>
 

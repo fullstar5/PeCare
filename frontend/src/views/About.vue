@@ -5,13 +5,13 @@
                 <div class="login-page">
                     <div class="overlap">
                         <div class="overlap-group">
-                            <img class="img" alt="Group" src="./img/group.png" />
+                            <img class="img" alt="Group" src="/img/group.png" />
                             <img class="group-2" alt="Group"
                                 src="src/screens/img/71b4a3984463bee3489c2ec5f160b95a-2.png" />
-                            <img class="mask-group" alt="Mask group" src="./img/mask-group.png" />
-                            <img class="mask-group-2" alt="Mask group" src="./img/mask-group-1.png" />
-                            <img class="mask-group-3" alt="Mask group" src="./img/mask-group-2.png" />
-                            <img class="img-2" alt="Img" src="./img/71b4a3984463bee3489c2ec5f160b95a-2.png" />
+                            <img class="mask-group" alt="Mask group" src="/img/mask-group.png" />
+                            <img class="mask-group-2" alt="Mask group" src="/img/mask-group-1.png" />
+                            <img class="mask-group-3" alt="Mask group" src="/img/mask-group-2.png" />
+                            <img class="img-2" alt="Img" src="/img/71b4a3984463bee3489c2ec5f160b95a-2.png" />
                             <div class="frame">
                                 <div class="div">
                                     <div class="text-wrapper">About Us</div>
@@ -53,7 +53,7 @@
                                         ownership and discover new ways to nurture our four-legged companions.
                                     </p>
                                 </div>
-                                <img class="group-5" alt="Group" src="./img/group-20.png" />
+                                <img class="group-5" alt="Group" src="/img/group-20.png" />
                             </div>
                             <div class="customer-care">
                                 <div class="div-wrapper">
@@ -66,9 +66,9 @@
                                     <div class="text-wrapper-2">Customer Care</div>
                                 </div>
                             </div>
-                            <img class="group-6" alt="Group" src="./img/group-22.png" />
+                            <img class="group-6" alt="Group" src="/img/group-22.png" />
                         </div>
-                        <img class="logo" alt="Logo" src="./img/logo.png" />
+                        <img class="logo" alt="Logo" src="/img/logo.png" />
                     </div>
                 </div>
             </div>
@@ -78,8 +78,8 @@
 
 <script>
 export default {
-    name: "Box",
-};
+  name: "Box",
+}
 </script>
 
 

@@ -1,11 +1,11 @@
 import request from '@/utils/request'
 
-/*export function listOrder(query) {
+export function listOrder() {
   return request({
-    url: '/',
-    params: query
+    url: '/order/all',
+    method: 'post'
   })
-}*/
+}
 
 export function createOrder(data) {
     return request({

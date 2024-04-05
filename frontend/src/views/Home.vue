@@ -21,10 +21,10 @@
             <v-col v-for="n in 2" :key="n">
               <v-sheet class="pa-2 ma-2 pecare-order" style="height: 150px">
 
-                <b>Owner: </b>{{ (m-1) * 2 + n }}{{ orders[(m-1) * 2 + n]}}<br/>
-                <b>Pet Name: </b><br/>
-                <b>Time Requirement: </b><br/>
-                <b>Location: </b><br/>
+                <b>Owner: </b>{{  (orders[(m-1) * 2 + n - 1])["requesterid"] }}<br/>
+                <b>Pet Name: </b>{{  (orders[(m-1) * 2 + n - 1])["requesterpetid"] }}<br/>
+                <b>Time Requirement: </b>{{  new Date((orders[(m-1) * 2 + n - 1])["ordertime"]) }}<br/>
+<!--                <b>Location: </b>{{  (orders[(m-1) * 2 + n - 1])["requesterpetid"] }}<br/>-->
               </v-sheet>
             </v-col>
           </v-row>
@@ -38,7 +38,7 @@
 </template>
 
 <script>
-
+import { createOrder, updateOrder, listOrder } from "@/api/order"
 
 export default {
   name: 'Home',
@@ -52,7 +52,7 @@ export default {
         ordername: undefined,
         requesterpetid: undefined
       },
-      total: 7,
+      total: 0,
       // form is used to create/update item
       form: {},
       orders: [],
@@ -60,39 +60,13 @@ export default {
   },
   methods: {
     getAvailableOrder() {
-      listUser(this.addDateRange(this.queryParams, this.dateRange)).then(response => {
-        this.userList = response.rows;
-        this.total = response.total;
-        this.loading = false;
+      listOrder(this.queryParams).then(response => {
+        this.orders = response;
+        this.total = response.length;
       });
     },
     moreOrder() {
-      this.orders = [
-        {
-          name: 'Item #1',
-          id: 1,
-        },
-        {
-          name: 'Item #2',
-          id: 2,
-        },
-        {
-          name: 'Item #3',
-          id: 3,
-        },
-        {
-          name: 'Item #1',
-          id: 1,
-        },
-        {
-          name: 'Item #2',
-          id: 2,
-        },
-        {
-          name: 'Item #3',
-          id: 3,
-        },
-      ]
+      //
     },
   }
 }

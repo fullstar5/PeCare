@@ -50,7 +50,12 @@
       "space-before-function-paren": "off",
       "key-spacing": "off",
       "vue/no-unused-components": "off",
-      "comma-dangle": "off"
+      "comma-dangle": "off",
+      "no-irregular-whitespace": "off",
+      "no-trailing-spaces": "off",
+      "semi": "off",
+      "prefer-promise-reject-errors": "off",
+      "indent": "off"
     }
   },
   "browserslist": [

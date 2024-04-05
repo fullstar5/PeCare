@@ -24,7 +24,7 @@
           </span>
           <span class="text-wrapper-5">
             <br />
-                Time Requirement:{" "}
+            Time Requirement:{" "}
           </span>
           <span class="text-wrapper-6">
             7th May

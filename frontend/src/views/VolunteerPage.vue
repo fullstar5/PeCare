@@ -10,9 +10,9 @@
 </template>
 
 <script>
-import Header from "./sections/Header.vue";
-import Overlap from "./sections/Overlap/Overlap.vue";
-import OverlapGroup from "./sections/OverlapGroup.vue";
+import Header from "./sections/Header.vue"
+import Overlap from "./sections/Overlap/Overlap.vue"
+import OverlapGroup from "./sections/OverlapGroup.vue"
 
 export default {
   name: "VolunteerPage",

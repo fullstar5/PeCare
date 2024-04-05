@@ -42,18 +42,18 @@ instance.interceptors.response.use(res => {
     return res.data
   }
 
-  // if (code === 500) {
-  //   Message({ message: msg, type: 'error' })
-  //   return Promise.reject(new Error(msg))
-  // } else if (code === 601) {
-  //   Message({ message: msg, type: 'warning' })
-  //   return Promise.reject('error')
-  // } else if (code !== 200) {
-  //   Notification.error({ title: msg })
-  //   return Promise.reject('error')
-  // } else {
-  //   return res.data
-  // }
+  if (code === 500) {
+    Message({ message: msg, type: 'error' })
+    return Promise.reject(new Error(msg))
+  } else if (code === 601) {
+    Message({ message: msg, type: 'warning' })
+    return Promise.reject('error')
+  } else if (code !== 200) {
+    Notification.error({ title: msg })
+    return Promise.reject('error')
+  } else {
+    return res.data
+  }
 
 }, error => {
   console.log('err' + error)

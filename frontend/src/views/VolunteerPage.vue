@@ -1,14 +1,18 @@
 
 <template>
-  <div>
-
+  <div class="volunteer-page">
+    <div class="div-4">
+      <Header />
+      <Overlap />
+      <OverlapGroup />
+    </div>
   </div>
 </template>
 
 <script>
-import Header from "./VolunteerPage/sections/Header.vue";
-import Overlap from "./VolunteerPage/sections/Overlap/Overlap.vue";
-import OverlapGroup from "./VolunteerPage/sections/OverlapGroup.vue";
+import Header from "./sections/Header.vue";
+import Overlap from "./sections/Overlap/Overlap.vue";
+import OverlapGroup from "./sections/OverlapGroup.vue";
 
 export default {
   name: "VolunteerPage",

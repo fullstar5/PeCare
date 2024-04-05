@@ -1,11 +1,7 @@
 
 <template>
-  <div class="volunteer-page">
-    <div class="div-4">
-      <Header />
-      <Overlap />
-      <OverlapGroup />
-    </div>
+  <div>
+
   </div>
 </template>
 

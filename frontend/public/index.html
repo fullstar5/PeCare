@@ -1,17 +1,76 @@
 <!DOCTYPE html>
 <html lang="">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+
+    <!-- 全局样式 -->
+    <style>
+        /* .container样式 */
+        .container {
+            overflow: auto;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: #FFFFCC; /* 淡黄色背景 */
+        }
+
+        /* .header样式 */
+        .header {
+            height: 10%;
+            position: absolute;
+            width: 100%;
+        }
+
+        /* .frame样式 */
+        .frame {
+            align-items: center;
+            display: inline-flex;
+            gap: 30px;
+            justify-content: center;
+            left: 70%;
+            position: absolute;
+            top: 70%;
+        }
+
+        /* 按钮样式 */
+        .VolunteerCenter, .myAccount, .loginButton {
+            background-color: white;
+            border: 2px solid #04AA6D;
+            color: black;
+            border-radius: 12px;
+            padding: 10px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 13px;
+            transition-duration: 0.4s;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        /* 按钮鼠标悬停样式 */
+        .VolunteerCenter:hover, .myAccount:hover, .loginButton:hover {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        /* 按钮点击样式 */
+        .VolunteerCenter:active, .myAccount:active, .loginButton:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+    </style>
+
+</head>
+<body>
+<noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+</noscript>
+<div id="app"></div>
+<!-- built files will be auto injected -->
+</body>
 </html>

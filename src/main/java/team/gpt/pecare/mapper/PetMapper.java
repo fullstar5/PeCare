@@ -1,5 +1,6 @@
 package team.gpt.pecare.mapper;
 
+import org.apache.ibatis.annotations.Mapper;
 import team.gpt.pecare.model.domain.Pet;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
@@ -9,6 +10,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 * @createDate 2024-04-05 00:18:54
 * @Entity team.gpt.pecare.model.domain.Pet
 */
+@Mapper
 public interface PetMapper extends BaseMapper<Pet> {
 
 }

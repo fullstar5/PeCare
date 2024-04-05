@@ -1,23 +1,26 @@
 package team.gpt.pecare.controller;
 
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-
+import team.gpt.pecare.common.BaseResponse;
+import team.gpt.pecare.common.ResultUtils;
+import team.gpt.pecare.model.domain.User;
+import team.gpt.pecare.model.domain.request.UserLoginRequest;
+import team.gpt.pecare.model.domain.request.UserRegisterRequest;
 import team.gpt.pecare.service.UserService;
 
 import javax.annotation.Resource;
-import java.util.ArrayList;
+import javax.servlet.http.HttpServletRequest;
+
 import java.util.List;
+import java.util.stream.Collectors;
+
+import static team.gpt.pecare.constant.UserContent.USER_LOGIN_STATE;
 
 @RestController
 @EnableWebMvc
@@ -26,6 +29,58 @@ public class UserController {
 
     static final Logger logger = LogManager.getLogger(UserController.class);
 
+    @Resource
+    private UserService userService;
+
+    @PostMapping("/register")
+    public BaseResponse<Long> userRegister(@RequestBody UserRegisterRequest userRegisterRequest) throws Exception {
+        if (userRegisterRequest == null){
+            throw new Exception("user register request is null");
+        }
+        String userName = userRegisterRequest.getUserName();
+        String userAccount = userRegisterRequest.getUserAccount();
+        String userPassword = userRegisterRequest.getUserPassword();
+        if (StringUtils.isAnyBlank(userAccount, userPassword)){
+            throw new Exception("user account or password is blank is register request");
+        }
+        long id = userService.userRegister(userName, userAccount, userPassword);
+        return ResultUtils.success(id);
+    }
+
+    @PostMapping("/login")
+    public BaseResponse<User> userLogin(@RequestBody UserLoginRequest userLoginRequest, HttpServletRequest request) throws Exception {
+        if (userLoginRequest == null){
+            throw new Exception("user login request is empty when request");
+        }
+        String userAccount = userLoginRequest.getUserAccount();
+        String userPassword = userLoginRequest.getUserPassword();
+        if (StringUtils.isAnyBlank(userAccount, userPassword)){
+            throw new Exception("user account or password is blank when login request");
+        }
+        User user = userService.userLogin(userAccount, userPassword, request);
+        return ResultUtils.success(user);
+    }
+
+    @PostMapping("/logout")
+    public BaseResponse<Integer> userLogout(HttpServletRequest request) throws Exception {
+        if (request == null) {
+            throw new Exception("user logout request is null");
+        }
+        int i = userService.userLogout(request);
+        return ResultUtils.success(i);
+    }
+
+    @GetMapping("/currentUser")
+    public BaseResponse<User> getCurrentUser(HttpServletRequest request) throws Exception {
+        Object userObj = request.getSession().getAttribute(USER_LOGIN_STATE);
+        User currentUser = (User) userObj;
+        if (currentUser == null){
+            throw new Exception("current user is null in currentUser request");
+        }
+        long userID = currentUser.getId();
+        User byId = userService.getById(userID);
+        return ResultUtils.success(byId);
+    }
 
 
 //    @GetMapping("/{userId}")

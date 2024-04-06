@@ -2,7 +2,7 @@
   <div class="container">
     <div class="header">
 <!--      <img class="i-need-pecare" alt="I need pecare" src="..\public\img\i-need-pecare-service.png" />-->
-      <div class="frame">
+      <div class="frame" style="padding-right: 100px">
         <button type="button" class="VolunteerCenter">
           <span class="btn__txt">Volunteer Center</span>
         </button>

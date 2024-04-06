@@ -93,7 +93,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createMemoryHistory(),
+  history: createMemoryHistory(process.env.BASE_URL),
   routes
 })
 

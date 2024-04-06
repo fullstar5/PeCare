@@ -85,40 +85,41 @@ export default {
 
 <style>
 .box {
-    height: 1501px;
-    width: 1457px;
+    height: 100%;
+    top: 70%;
+    width: 70%;
 }
 
 .box .cover-page {
-    height: 1501px;
+    height: 100%;
     left: 0;
-    position: fixed;
-    top: 0;
-    width: 1457px;
+    position: absolute;
+    top: 30%;
+    width: 95%;
 }
 
 .box .group {
-    height: 1501px;
+    height: 100%;
 }
 
 .box .login-page {
     background: radial-gradient(50% 50% at 50% 50%, rgb(249.49, 240.32, 216.76) 0%, rgb(255, 249.21, 110.33) 100%);
-    height: 1501px;
-    width: 1457px;
+    height: 100%;
+    width: 100%;
 }
 
 .box .overlap {
-    height: 1464px;
+    height: 100%;
     position: relative;
-    top: 37px;
+    top: 10%;
 }
 
 .box .overlap-group {
-    height: 1464px;
+    height: 100%;
     left: 0;
     position: absolute;
     top: 0;
-    width: 1457px;
+    width: 100%;
 }
 
 .box .img {
@@ -180,26 +181,26 @@ export default {
     border-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(0, 0, 0, 0)) 1;
     border-radius: 20px;
     box-shadow: 8px 4px 5px #0000003d;
-    height: 1105px;
-    left: 266px;
+    height: 100%;
+    left: 10%;
     overflow: hidden;
-    position: absolute;
+    position: relative;
     top: 0;
-    width: 978px;
+    width: 85%;
 }
 
 .box .div {
-    height: 274px;
-    left: 32px;
+    height: 20%;
+    left: 5%;
     position: absolute;
-    top: 29px;
-    width: 924px;
+    top: 5%;
+    width: 100%;
 }
 
 .box .text-wrapper {
     color: #ffffff;
     font-family: "Noto Sans", Helvetica;
-    font-size: 40px;
+    font-size: 35px;
     font-weight: 600;
     left: 0;
     letter-spacing: 0;
@@ -211,7 +212,7 @@ export default {
 .box .welcome-to-pecare-a {
     color: #ffffff;
     font-family: "Noto Sans", Helvetica;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 500;
     height: 204px;
     left: 0;
@@ -224,17 +225,17 @@ export default {
 }
 
 .box .group-3 {
-    height: 307px;
-    left: 32px;
+    height: 20%;
+    left: 5%;
     position: absolute;
-    top: 354px;
-    width: 917px;
+    top: 37%;
+  width: 100%;
 }
 
 .box .p {
     color: #ffffff;
     font-family: "Noto Sans", Helvetica;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 500;
     height: 253px;
     left: 0;
@@ -247,16 +248,16 @@ export default {
 }
 
 .box .group-4 {
-    height: 307px;
-    left: 32px;
+    height: 33%;
+    left: 5%;
     position: absolute;
-    top: 694px;
-    width: 917px;
+    top: 70%;
+    width: 100%;
 }
 
 .box .group-5 {
     height: 70px;
-    left: 279px;
+  left: 5%;
     position: absolute;
     top: 1001px;
     width: 364px;
@@ -291,7 +292,7 @@ export default {
 .box .text-wrapper-2 {
     color: #ffffff;
     font-family: "Noto Sans", Helvetica;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 400;
     letter-spacing: 0;
     line-height: normal;

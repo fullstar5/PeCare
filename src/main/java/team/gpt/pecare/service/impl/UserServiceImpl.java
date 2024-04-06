@@ -8,7 +8,6 @@ import team.gpt.pecare.mapper.UserMapper;
 import org.springframework.stereotype.Service;
 import org.apache.commons.lang3.StringUtils;
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
 
 import static team.gpt.pecare.constant.UserContent.USER_LOGIN_STATE;
 
@@ -72,9 +71,5 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
     }
 
 
-    @Override
-    public int userLogout(HttpServletRequest request) {
-        request.getSession().removeAttribute(USER_LOGIN_STATE);
-        return 1;
-    }
+
 }

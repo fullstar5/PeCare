@@ -15,7 +15,6 @@ import team.gpt.pecare.model.domain.request.UserRegisterRequest;
 import team.gpt.pecare.service.UserService;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -61,26 +60,6 @@ public class UserController {
         return ResultUtils.success(user);
     }
 
-    @PostMapping("/logout")
-    public BaseResponse<Integer> userLogout(HttpServletRequest request) throws Exception {
-        if (request == null) {
-            throw new Exception("user logout request is null");
-        }
-        int i = userService.userLogout(request);
-        return ResultUtils.success(i);
-    }
-
-    @GetMapping("/currentUser")
-    public BaseResponse<User> getCurrentUser(HttpServletRequest request) throws Exception {
-        Object userObj = request.getSession().getAttribute(USER_LOGIN_STATE);
-        User currentUser = (User) userObj;
-        if (currentUser == null){
-            throw new Exception("current user is null in currentUser request");
-        }
-        long userID = currentUser.getId();
-        User byId = userService.getById(userID);
-        return ResultUtils.success(byId);
-    }
 
 
 //    @GetMapping("/{userId}")

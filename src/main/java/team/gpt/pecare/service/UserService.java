@@ -2,7 +2,6 @@ package team.gpt.pecare.service;
 
 import team.gpt.pecare.model.domain.User;
 import com.baomidou.mybatisplus.extension.service.IService;
-import javax.servlet.http.HttpServletRequest;
 /**
  * @author Administrator
  * @description 针对表【user(user_table)】的数据库操作Service
@@ -15,6 +14,5 @@ public interface UserService extends IService<User> {
     User userLogin(String userAccount, String userPassword) throws Exception;
 
 
-    int userLogout(HttpServletRequest request);
 
 }
